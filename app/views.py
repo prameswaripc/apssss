@@ -107,13 +107,10 @@ def createdatapendaftaran(request):
 # Pelayanan
 def pelayanan(request):
     allpelayananobj = models.pelayanan.objects.all()
-    getpelayananobj = models.pelayanan.objects.get(idpelayanan=1)
     filterpelayananobj = models.pelayanan.objects.filter(jenispelayanan = 'Penambalan Gigi')
-
 
     return render(request, 'pelayanan.html',{
         'allpelayananobj' : allpelayananobj,
-        'getpelayananobj' : getpelayananobj,
         'filterpelayananobj': filterpelayananobj
     })
 
